@@ -33,7 +33,10 @@ class Neo4jConnection:
     
 #%%
 # Load university data from CSV
-uni = pd.read_csv('C:/Users/DEVARSH SHETH/Desktop/Data_Hazim/Project Files/output_university.csv')
+import os
+
+cwd = os.getcwd()
+uni = pd.read_csv(cwd+'\\university_data.csv')
 
 # Drop unnecessary columns
 uni.drop(['primaryPhoto', 'primaryPhotoThumb', 'sortName', 
