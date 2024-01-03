@@ -1,0 +1,75 @@
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font stack with fallback options */
+    margin: 20px; /* Margin for the entire page */
+    background-color: #1a1a1a; /* Background color for the page */
+    color: #e6e6e6; /* Text color for the page */
+}
+
+/* Header Styles */
+h1, h2 {
+    color: #ffcc00; /* Header text color */
+}
+
+/* Form Styles */
+form {
+    margin-bottom: 20px; /* Margin below the form */
+}
+
+label {
+    font-weight: bold; /* Bold labels */
+    margin-right: 10px; /* Margin to the right of labels */
+    color: #e6e6e6; /* Label text color */
+}
+
+input {
+    padding: 10px; /* Padding for input elements */
+    border: 1px solid #333; /* Border for input elements */
+    border-radius: 5px; /* Border radius for input elements */
+    background-color: #333; /* Background color for input elements */
+    color: #e6e6e6; /* Text color for input elements */
+}
+
+/* Button Styles */
+button {
+    padding: 10px 15px; /* Padding for buttons */
+    background-color: #4CAF50; /* Background color for buttons */
+    color: white; /* Text color for buttons */
+    border: none; /* No border for buttons */
+    border-radius: 5px; /* Border radius for buttons */
+    cursor: pointer; /* Cursor style for buttons */
+}
+
+button:hover {
+    background-color: #45a049; /* Background color on hover for buttons */
+}
+
+/* Table Styles */
+table {
+    width: 100%; /* Full width for tables */
+    border-collapse: collapse; /* Collapse borders in the table */
+    margin-top: 20px; /* Margin above the table */
+    background-color: #333; /* Background color for the table */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for the table */
+    color: #e6e6e6; /* Text color for the table */
+}
+
+th, td {
+    border: 1px solid #555; /* Border for table cells */
+    text-align: left; /* Text alignment for table cells */
+    padding: 12px; /* Padding for table cells */
+}
+
+th {
+    background-color: #444; /* Background color for table headers */
+}
+
+/* List Styles */
+ul {
+    list-style-type: none; /* Remove bullet points from lists */
+    padding: 0; /* Remove default padding from lists */
+}
+
+li {
+    margin-bottom: 10px; /* Margin below list items */
+}

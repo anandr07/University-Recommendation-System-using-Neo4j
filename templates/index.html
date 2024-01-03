@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Set character encoding and viewport for responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Set the title of the web page -->
+    <title>University Recommendation System</title>
+    <!-- Link to the external stylesheet for styling -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Page header with the title -->
+    <h1>University Recommendation System</h1>
+
+    <!-- Form for user input, submitting to the "/recommend" route with the POST method -->
+    <form action="/recommend" method="post">
+        <!-- Label and input field for entering the university name, with required attribute -->
+        <label for="college_name">Enter the name of your university:</label>
+        <input type="text" id="college_name" name="college_name" required>
+        <!-- Submit button to trigger the recommendation process -->
+        <button type="submit">Get Recommendations</button>
+    </form>
+
+    <!-- Display recommendations if the user has entered a university name -->
+    {% if college_name %}
+        <!-- Section heading for recommendations -->
+        <h2>Top 5 Recommendations for {{college_name}}:</h2>
+
+        <!-- Check if recommendations are available -->
+        {% if recommendations %}
+            <!-- Table to display the recommendations -->
+            <table>
+                <!-- Table header with column names -->
+                <tr>
+                    <th>University</th>
+                    <th>Similar University</th>
+                </tr>
+
+                <!-- Loop through each recommendation and display in a table row -->
+                {% for recommendation in recommendations %}
+                    <tr>
+                        <!-- Display the name of the university -->
+                        <td>{{recommendation[0]}}</td>
+                        <!-- Display the similar university's name -->
+                        <td>{{recommendation[1]}}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        {% else %}
+            <!-- Display a message if no recommendations are available -->
+            <p>No recommendations available.</p>
+        {% endif %}
+    {% endif %}
+</body>
+</html>
