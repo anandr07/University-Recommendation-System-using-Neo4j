@@ -1,4 +1,4 @@
-# University-Recommendation-System using Neo4j
+# University Recommendation System using Neo4j
 Built a recommendation system for Recommending Similar Universities. 
 
 ![image](https://github.com/anandr07/University-Recommendation-System/assets/66896800/607279e9-1ba7-4c3c-9994-33a128c34cbb)
